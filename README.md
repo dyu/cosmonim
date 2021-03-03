@@ -35,4 +35,10 @@ headers - if so, just add that header into the `stubs` directory (just create an
 and it'll probably work :P
 
 Apart from `hello.nim`, this repo also has `gethttp.nim` and `asyncserv.nim`. To compile them you need to apply the `asyncserv.diff` patch
-to your local Nim installation. Then you can compile those examples as usual.
+to your local Nim installation. This is also pretty simple:
+```
+cd nimGitDir
+git apply /path/to/cosmonim/asyncserv.diff 
+```
+
+Then you can compile those examples as usual.
