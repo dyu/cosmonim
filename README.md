@@ -34,10 +34,5 @@ If you import some other stdlib modules and the compilation fails, first check i
 headers - if so, just add that header into the `stubs` directory (just create an empty file with the right directory hierarchy),
 and it'll probably work :P
 
-Apart from `hello.nim`, this repo also has `gethttp.nim` (httpclient) example. To compile it (as of 03-03-2021), you need to 
-patch line 303 in `your_nim_distribution/lib/pure/nativesockets.nim` (last line in the `getAddrInfo` proc). 
-
-Simply replace `raiseOSError(osLastError()), $gai_strerror(gaiResult))` with `raiseOSError(osLastError())` and then you should be able to build the `gethttp.nim` example as well.
-
-TODO:
-- Show how to make asynchttpserver work
+Apart from `hello.nim`, this repo also has `gethttp.nim` and `asyncserv.nim`. To compile them you need to apply the `asyncserv.diff` patch
+to your local Nim installation. Then you can compile those examples as usual.
