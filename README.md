@@ -18,12 +18,10 @@ cosmopolitan/
 ├── cosmopolitan.a
 ├── cosmopolitan.h
 └── crt.o
-
-0 directories, 6 files
 ```
 
 
-Then you can compile the first example with:
+Now you can actually compile the first example with:
 ```
 # Compile an ELF binary
 nim c -d:danger --opt:size -o:hello.elf hello.nim
@@ -37,8 +35,9 @@ headers - if so, just add that header into the `stubs` directory (just create an
 and it'll probably work :P
 
 Apart from `hello.nim`, this repo also has `gethttp.nim` (httpclient) example. To compile it (as of 03-03-2021), you need to 
-patch line 303 in nim_distribution/lib/pure/nativesockets.nim (last line in the `getAddrInfo` proc). Simply replace
-`raiseOSError(osLastError()), $gai_strerror(gaiResult))` with `raiseOSError(osLastError())` and then you should be able to build the `gethttp.nim` example as well.
+patch line 303 in `your_nim_distribution/lib/pure/nativesockets.nim` (last line in the `getAddrInfo` proc). 
+
+Simply replace `raiseOSError(osLastError()), $gai_strerror(gaiResult))` with `raiseOSError(osLastError())` and then you should be able to build the `gethttp.nim` example as well.
 
 TODO:
 - Show how to make asynchttpserver work
