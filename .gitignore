@@ -1,0 +1,6 @@
+/cosmopolitan/*.a
+/cosmopolitan/*.o
+/cosmopolitan/*.h
+/cosmopolitan/*.lds
+/hello.com
+/hello.elf
