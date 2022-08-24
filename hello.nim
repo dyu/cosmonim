@@ -5,6 +5,6 @@ x["hello"] = "world"
 
 echo "Hello, world!"
 
-writeFile("dist/testing.txt", "hellohere")
+writeFile("hello.txt", x["hello"])
 
-echo readFile("dist/testing.txt")
+echo readFile("hello.txt")

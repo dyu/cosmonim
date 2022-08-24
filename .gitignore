@@ -1,5 +1,6 @@
 /dist
 /nim-cache
+/hello.txt
 /cosmopolitan/*.a
 /cosmopolitan/*.o
 /cosmopolitan/*.h
