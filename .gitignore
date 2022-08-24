@@ -1,3 +1,5 @@
+/dist
+/nim-cache
 /cosmopolitan/*.a
 /cosmopolitan/*.o
 /cosmopolitan/*.h
